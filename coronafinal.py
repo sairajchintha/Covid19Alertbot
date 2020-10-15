@@ -9,8 +9,8 @@ pdata=r.json()
 
 
 def sendmsg(msg,number):
-    account_sid = os.environ.get('sid')
-    auth_token = os.environ.get("token")
+    account_sid = "Your Twilio SID here"
+    auth_token = "Your Auth_Token Here"
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
@@ -30,7 +30,7 @@ def update(pdata):
     else:
         return False
 
-numbers=['918499911991','918096637008']
+numbers=['919999999999']#add your recievers mobile numbers in this list in specified format seperated by a comma,
 while True:
 
     if update(pdata):
